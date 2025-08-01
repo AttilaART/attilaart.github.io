@@ -1,0 +1,28 @@
+/* Note, clash-grotesk.css must be loaded before this file */
+
+#nav {
+  height: 100px;
+}
+
+h1 {
+  font-family: "ClashGrotesk-Bold";
+}
+
+h2,
+h3 {
+  font-family: "ClashGrotesk-Semibold";
+}
+
+body {
+  /*--pico-border-radius: 0.5em;*/
+  --go-color: #00acd7;
+  --htmx-color: #4065c5;
+  --html-color: #e54d24;
+  --javascript-color: #f7df1e;
+  --godot-color: #478cbf;
+  --odoo-color: #a2488a;
+}
+
+html {
+  scroll-behavior: smooth;
+}

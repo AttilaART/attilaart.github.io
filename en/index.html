@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/assets/css/pico.css">
+  <link rel="stylesheet" href="/assets/css/pico_extension.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/clash-grotesk.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/js/htmx.min.js"></script>
+  <script src="/js/interface.js"></script>
+</head>
+
+<nav id="nav"></nav>
+
+<body>
+  <section id="top" style="min-height: 100vh;" class="container-fluid">
+    <div id="title">
+      <h1><span id="make">MAKE</span><span id="your"> YOUR</span>
+        <span id="mark"> MARK.</span>
+      </h1>
+      <h2 lang="en">Get a custom website.</h2>
+      <a href="#your-homepage"><button class="outline contrast">Learn more</button></a>
+    </div>
+  </section>
+  <section>
+    <center>
+      <h2 lang="en">Your benefits</h2>
+    </center>
+  </section>
+  <div class="top-nav">
+    <nav class="container nav-wrap">
+      <li> <a href="#your-homepage"> <span class="tag" style="background: var(--pico-primary);">1</span> Your
+          Homepage</a>
+      </li>
+      <li><a href="#personalised"> <span class="tag" style="background: var(--pico-primary);">2</span> Personalised</a>
+      </li>
+      <li><a href="#your-property"> <span class="tag" style="background: var(--pico-primary);">3</span> Your
+          Property</a>
+      </li>
+      <li><a href="#pricing"> <span class="tag" style="background: var(--pico-primary);">4</span> Pricing</a></li>
+      <li><a href="/contact.html"><button type="">Get in toutch</button></a></li>
+    </nav>
+  </div>
+  <a href="#top"><button id="back-to-top-arrow" data-tooltip="Scroll to top"><img src="/assets/graphics/down-arrow.svg"
+        alt="↑" style="transform: rotate(180deg); filter: invert();"></button></a>
+  <section id="your-homepage" class="container grid">
+    <div class="y-middle">
+      <h2>Your Homepage</h2>
+      <p>Set up your online presence with a beautiful and engaging website.</p>
+      <div>
+        <a href="#pricing">
+          <button type="">See Pricing</button></a>
+      </div>
+    </div>
+    <img src="/assets/images/home/placeholder.png" alt="A placehoder image">
+  </section>
+
+  <section id="personalised" class="container grid">
+    <img src="/assets/images/home/placeholder.png" alt="A placehoder image">
+    <div class="y-middle text-right top-on-mobile">
+      <h2>Personalised</h2>
+      <p>Show off your business in the best light and get leads</p>
+      <div>
+        <a href="#pricing">
+          <button type="">Get started</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="your-property" class="container grid">
+    <div class="y-middle">
+      <h2>No Strings Attached</h2>
+      <p>After we make your website it's yours. Forever.</p>
+      <div>
+        <a href="#pricing">
+          <button type="">Continue</button>
+        </a>
+      </div>
+    </div>
+    <img src="/assets/images/home/placeholder.png" alt="A placehoder image">
+  </section>
+
+  <section id="projects" class="container-fluid">
+    <h1 style="text-align: center;">Past Projects</h1>
+    <section id="portfolio">
+    </section>
+  </section>
+
+  <section id="pricing" class="container">
+    <h1 style="text-align: center;">Pricing</h1>
+    <div class="grid">
+      <article id="preferred">
+        <div style="margin-bottom: var(--pico-spacing);">
+          <h6 style="margin-bottom: calc(var(--pico-spacing) / 4);">Standard</h6>
+          <h2 style="margin-bottom: calc(var(--pico-spacing) / 4);">300 CHF <small> + 3 CHF/mo </small></h2>
+          <small>Billed annually</small>
+        </div>
+        <a href="/contact.html">
+          <button style="margin-bottom: var(--pico-spacing);" type="">Sign Up</button>
+        </a>
+        <h6 style="margin-bottom: calc(var(--pico-spacing) / 2);">Benifits of this plan:</h6>
+        <ul>
+          <li>Up to 5 custom pages</li>
+          <li>Included web-hosting</li>
+          <li data-tooltip="Website URL">Free domain for 1 year*</li>
+          <li>In depth design consulting</li>
+          <li>25 GB NVMe storage*</li>
+        </ul>
+      </article>
+      <article>
+        <div style="margin-bottom: var(--pico-spacing);">
+          <h6 style="margin-bottom: calc(var(--pico-spacing) / 4);">Premium</h6>
+          <h2 style="margin-bottom: calc(var(--pico-spacing) / 4);">500 CHF <small> + 5 CHF/mo </small></h2>
+          <small>Billed annually</small>
+        </div>
+        <a href="/contact.html">
+          <button style="margin-bottom: var(--pico-spacing);" type="">Sign Up</button>
+        </a>
+        <h6 style="margin-bottom: calc(var(--pico-spacing) / 2);">Everything in Standard, plus:</h6>
+        <ul>
+          <li>Up to 10 custom pages</li>
+          <li>Sales Funnel</li>
+          <li>50 GB NVMe storage*</li>
+          <li>Multiple languages</li>
+        </ul>
+      </article>
+    </div>
+    <div class="grid">
+      <small>* Provided through hosting provider</small>
+    </div>
+  </section>
+
+</body>
+
+<footer id="footer"></footer>
+
+</html>
+
+<style>
+  #top {
+    background: linear-gradient(black 0%, black 80%, var(--pico-background-color));
+  }
+
+  #title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+  }
+
+  #make,
+  #your,
+  #mark {
+    font-size: 7rem;
+  }
+
+  @media (max-width: 400px) {
+
+    #make,
+    #your,
+    #mark {
+      font-size: 6.5rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+
+    #make,
+    #your,
+    #mark {
+      font-size: 6rem;
+    }
+  }
+
+  #make,
+  #your {
+    -webkit-text-stroke: 1px white;
+    color: black;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: 0.25s;
+  }
+
+  #make:hover,
+  #your:hover {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+  }
+
+  #mark {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+    transition: 0.25s;
+    text-wrap: nowrap;
+  }
+
+  #mark:hover {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  }
+
+  #back-to-top-arrow {
+    width: 5em;
+    background: var(--pico-card-background-color);
+    border-radius: 100px;
+    border-width: 0;
+    transition: 0.5s;
+  }
+
+  #back-to-top-arrow {
+    position: sticky;
+    top: 80vh;
+    left: calc(100% - 6em);
+    z-index: 1;
+  }
+
+  #back-to-top-arrow:hover {
+    filter: invert();
+    transform: scale(1.1);
+  }
+
+  #projects {
+    backdrop-filter: brightness(1.1);
+  }
+
+  #preferred {
+    outline: solid 1px var(--pico-primary);
+    box-shadow: 0px 0px 10px 0px var(--pico-primary);
+    transition: 0.25s;
+  }
+
+  #preferred:hover {
+    box-shadow: 0px 0px 15px 0px var(--pico-primary);
+  }
+</style>
