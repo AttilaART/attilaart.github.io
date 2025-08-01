@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/assets/css/pico.css">
+  <link rel="stylesheet" href="/assets/css/pico_extension.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/clash-grotesk.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/js/htmx.js"></script>
+  <script src="/js/interface.js"></script>
+  <script>
+    const locale = new Intl.Locale(navigator.language);
+
+    console.log(locale.language)
+
+    switch (locale.language) {
+      case 'en':
+        window.location.pathname = "/en/"
+        break;
+      default:
+        window.location.pathname = "/de/"
+        break;
+    }
+
+  </script>
+</head>
+
+<body>
+  <header class="container">
+    <h1>Loading...</h1>
+  </header>
+</body>
+<footer id="footer"></footer>
+
+</html>
+
+<style>
+</style>
