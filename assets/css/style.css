@@ -26,3 +26,54 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+#see-more-arrow,
+#back-to-top-arrow {
+  width: 5em;
+  background: var(--pico-card-background-color);
+  border-radius: 100px;
+  border-width: 0;
+  transition: 0.5s;
+}
+
+#back-to-top-arrow:has(img) img {
+  transform: rotate(180deg);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  #back-to-top-arrow:has(img) img,
+  #see-more-arrow:has(img) img {
+    filter: invert()
+  }
+}
+
+#see-more-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 5em;
+  background: var(--pico-card-background-color);
+  border-radius: 100px;
+  border-width: 0;
+  transition: 0.5s;
+}
+
+#back-to-top-arrow {
+  position: sticky;
+  top: 80vh;
+  left: calc(100% - 6em);
+  z-index: 1;
+}
+
+#see-more-arrow:hover {
+  filter: invert();
+  transform: translate(-50%, 50%) scale(1.1);
+}
+
+#back-to-top-arrow:hover {
+  filter: invert();
+  transform: scale(1.1);
+}

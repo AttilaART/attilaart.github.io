@@ -56,7 +56,11 @@
               <small>Javascript Framework</small>
             </div>
           </article>
-          <article class="language-card shiny"><img src="/assets/graphics/logos/htmx.svg" alt="Htmx logo">
+          <article class="language-card shiny">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="/assets/graphics/logos/htmx.svg">
+              <img src="/assets/graphics/logos/htmx-light.svg" alt="htmx logo">
+            </picture>
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">HTMX</h1>
               <small>Javascript library</small>
@@ -74,7 +78,8 @@
               <small>Programming Language</small>
             </div>
           </article>
-          <article class="language-card shiny"><img src="/assets/graphics/logos/odoo.webp" alt="godot logo">
+          <article class="language-card shiny">
+            <img src="/assets/graphics/logos/odoo.webp" alt="odoo logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Odoo</h1>
               <small>CRM &amp; ERP</small>
@@ -93,8 +98,8 @@
             </div>
           </article>
         </div>
-        <button id="see-more-arrow" onclick="window.scrollTo({top: document.getElementById('about-me').offsetTop,
-        behavior: 'smooth' })"><img src="/assets/graphics/down-arrow.svg" alt="↓" style="filter: invert();"></button>
+        <a href="#about-me"><button id="see-more-arrow"><img src="/assets/graphics/down-arrow.svg" alt="↓"
+              style="filter: light-dark(, invert());"></button></a>
       </article>
     </section>
   </div>
@@ -116,9 +121,8 @@
     </p>
   </section>
 
-  <button id="back-to-top-arrow" data-tooltip="Scroll to top" onclick="window.scrollTo({top: document.getElementById('top').offsetTop,
-        behavior: 'smooth' })"><img src="/assets/graphics/down-arrow.svg" alt="↑"
-      style="transform: rotate(180deg); filter: invert();"></button>
+  <a href="#top"><button id="back-to-top-arrow" data-tooltip="Scroll to top"><img src="/assets/graphics/down-arrow.svg"
+        alt="↑"></button></a>
   <section id="projects" class="container-fluid">
     <h1 style="text-align: center;">Past Projects</h1>
     <section id="portfolio">
@@ -174,8 +178,13 @@
     padding: var(--pico-spacing);
     opacity: 0%;
     background: rgba(0, 0, 0, 1);
+    color: #c2c7d0;
     backdrop-filter: blur(2px);
     transition: 0.25s;
+  }
+
+  article.language-card:has(div) div:has(h1) h1 {
+    color: #f0f1f3;
   }
 
   article.language-card:hover:has(div) div {
@@ -266,44 +275,6 @@
       opacity: 0%;
       transform: translate(-10px, -5px) rotate(-5deg);
     }
-  }
-
-  #see-more-arrow,
-  #back-to-top-arrow {
-    width: 5em;
-    background: var(--pico-card-background-color);
-    border-radius: 100px;
-    border-width: 0;
-    transition: 0.5s;
-  }
-
-  #see-more-arrow {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    width: 5em;
-    background: var(--pico-card-background-color);
-    border-radius: 100px;
-    border-width: 0;
-    transition: 0.5s;
-  }
-
-  #back-to-top-arrow {
-    position: sticky;
-    top: 80vh;
-    left: calc(100% - 6em);
-    z-index: 1;
-  }
-
-  #see-more-arrow:hover {
-    filter: invert();
-    transform: translate(-50%, 50%) scale(1.1);
-  }
-
-  #back-to-top-arrow:hover {
-    filter: invert();
-    transform: scale(1.1);
   }
 
   #projects {

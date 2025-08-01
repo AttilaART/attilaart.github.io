@@ -29,7 +29,7 @@
           <!--<div style="flex-grow: 1;"></div>-->
           <div style="">
             <h2>Attila Pinter</h2>
-            <p>Young Programmer based in Winterthur &amp; fluent in <strong>English, German and French</strong></p>
+            <p>Junger Programmierer von Winterthur. Kann fliessend <strong>Englisch, Deutsch und Französich</strong></p>
             <small class="grid">
               <p>Email: <a href="mailto:attila.jobs@icloud.com">attila.jobs@icloud.com</a></p>
               <p>Github: <a href="https://github.com/AttilaART">AttilaART</a></p>
@@ -41,37 +41,41 @@
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Javascript
               </h1>
-              <small>Programming Language</small>
+              <small>Programmiersprache</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/html.webp" alt="Html logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">HTML/CSS</h1>
-              <small>Markup Languages</small>
+              <small>Markupsprachen</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/svelte.webp" alt="Svelte logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Svelte</h1>
-              <small>Javascript Framework</small>
+              <small>Javascript-Framework</small>
             </div>
           </article>
-          <article class="language-card shiny"><img src="/assets/graphics/logos/htmx.svg" alt="Htmx logo">
+          <article class="language-card shiny">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="/assets/graphics/logos/htmx.svg">
+              <img src="/assets/graphics/logos/htmx-light.svg" alt="htmx logo">
+            </picture>
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">HTMX</h1>
-              <small>Javascript library</small>
+              <small>Javascript-Bibliothek</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/go.webp" alt="go logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Go</h1>
-              <small>Programming Language</small>
+              <small>Programmiersprache</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/python.webp" alt="python logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Python</h1>
-              <small>Programming Language</small>
+              <small>Programmiersprache</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/odoo.webp" alt="godot logo">
@@ -83,44 +87,43 @@
           <article class="language-card shiny"><img src="/assets/graphics/logos/godot.webp" alt="godot logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Godot</h1>
-              <small>Game engine</small>
+              <small>Game Engine</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/linux.webp" alt="Archlinux logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Linux</h1>
-              <small>Operating system</small>
+              <small>Betriebssystem</small>
             </div>
           </article>
         </div>
-        <button id="see-more-arrow" onclick="window.scrollTo({top: document.getElementById('about-me').offsetTop,
-        behavior: 'smooth' })"><img src="/assets/graphics/down-arrow.svg" alt="↓" style="filter: invert();"></button>
+        <a href="#about-me"><button id="see-more-arrow"><img src="/assets/graphics/down-arrow.svg" alt="↓"
+              style="filter: light-dark(, invert());"></button></a>
       </article>
     </section>
   </div>
 
   <section id="about-me" class="container">
-    <h2>About Me</h2>
+    <h2>Über Mich</h2>
     <h6>
-      I'm a student in Year 4 of Gymnasium in Winterthur who
-      loves programming, cooking and volleyball.
+      Ich bin ein Schüler im 4. Jahr Gymnasium in Winterthur,
+      der Coding, Kochen und Volleyball liebt.
     </h6>
     <p>
-      After programming on and off for 3 years developing various
-      small scripts, I've been focusing on full stack web developent for the
-      last 6 months.
+      Nach 3 Jahren immer wieder maliger Programmierung, fokusiere ich
+      seid den letzten 6 Monate auf full-stack Entwickelung.
     </p>
     <p>
-      I'm also active in the Students' Organisation where as well
-      as organising events, I develop software to improve efficiency.
+      Ich bin auch teil der Schülerorganissation, wo ich nicht nur Events
+      organisiere, sondern auch Software entwicke um Events am
+      reibungslosten zu machen
     </p>
   </section>
 
-  <button id="back-to-top-arrow" data-tooltip="Scroll to top" onclick="window.scrollTo({top: document.getElementById('top').offsetTop,
-        behavior: 'smooth' })"><img src="/assets/graphics/down-arrow.svg" alt="↑"
-      style="transform: rotate(180deg); filter: invert();"></button>
+  <a href="#top"><button id="back-to-top-arrow" data-tooltip="Scroll to top"><img src="/assets/graphics/down-arrow.svg"
+        alt="↑"></button></a>
   <section id="projects" class="container-fluid">
-    <h1 style="text-align: center;">Past Projects</h1>
+    <h1 style="text-align: center;">Verganene Projekte</h1>
     <section id="portfolio">
 
     </section>
@@ -174,8 +177,13 @@
     padding: var(--pico-spacing);
     opacity: 0%;
     background: rgba(0, 0, 0, 1);
+    color: #c2c7d0;
     backdrop-filter: blur(2px);
     transition: 0.25s;
+  }
+
+  article.language-card:has(div) div:has(h1) h1 {
+    color: #f0f1f3;
   }
 
   article.language-card:hover:has(div) div {
