@@ -1,8 +1,14 @@
 .top-nav {
   position: sticky;
-  background-color: var(--pico-background-color);
+  background-color: transparent;
   top: 0;
   z-index: 2;
+  transition: 0.25s;
+}
+
+html:not([data-scroll="0"]) .top-nav {
+  background-color: var(--pico-background-color);
+  box-shadow: 00 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .fullscreen-nav {

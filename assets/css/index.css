@@ -1,0 +1,105 @@
+#top {
+  background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  #top {
+    background: linear-gradient(
+      black 0%,
+      black 80%,
+      var(--pico-background-color)
+    );
+  }
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+}
+
+#make,
+#your,
+#mark {
+  font-size: 7rem;
+}
+
+@media (max-width: 400px) {
+  #make,
+  #your,
+  #mark {
+    font-size: 6.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #make,
+  #your,
+  #mark {
+    font-size: 6rem;
+  }
+}
+
+#make,
+#your {
+  -webkit-text-stroke: 1px light-dark(black, white);
+  color: light-dark(white, black);
+  text-shadow: 0px 0px 10px
+    light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+  transition: 0.25s;
+}
+
+#make:hover,
+#your:hover {
+  text-shadow: 0px 0px 20px
+    light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+}
+
+#mark {
+  text-shadow: 0px 0px 20px
+    light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+  transition: 0.25s;
+  text-wrap: nowrap;
+  color: light-dark(black, white);
+}
+
+#mark:hover {
+  text-shadow: 0px 0px 20px
+    light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+#back-to-top-arrow {
+  width: 5em;
+  background: var(--pico-card-background-color);
+  border-radius: 100px;
+  border-width: 0;
+  transition: 0.5s;
+}
+
+#back-to-top-arrow {
+  position: sticky;
+  top: 80vh;
+  left: calc(100% - 6em);
+  z-index: 1;
+}
+
+#back-to-top-arrow:hover {
+  filter: invert();
+  transform: scale(1.1);
+}
+
+#projects {
+  backdrop-filter: brightness(1.1);
+}
+
+#preferred {
+  outline: solid 1px var(--pico-primary);
+  box-shadow: 0px 0px 10px 0px var(--pico-primary);
+  transition: 0.25s;
+}
+
+#preferred:hover {
+  box-shadow: 0px 0px 15px 0px var(--pico-primary);
+}
