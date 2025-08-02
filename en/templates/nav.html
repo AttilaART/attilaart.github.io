@@ -24,79 +24,33 @@
         >
       </li>
     </ul>
+    <ul id="fullscreen-nav-button">
+      <li>
+        <button type="" class="secondary" onclick="handleMenuButton()">
+          &#9776;
+        </button>
+      </li>
+    </ul>
   </nav>
-  <style>
-    .top-nav {
-      position: sticky;
-      background-color: var(--pico-background-color);
-      top: 0;
-      z-index: 2;
-    }
-
-    #nav-dropdown:has(ul) ul {
-      right: 0;
-      left: unset;
-    }
-
-    #nav-dropdown:has(summary) summary::after {
-      content: unset;
-    }
-
-    #nav-dropdown:has(summary) summary {
-      font-size: 1rem;
-      text-align: center;
-      aspect-ratio: 1/1;
-    }
-  </style>
-  <script>
-    const picoExtraSmall = 576; // px
-
-    function handleNavScaling() {
-      if (window.window.innerWidth < picoExtraSmall) {
-        var dropdown = document.getElementById("nav-dropdown");
-        if (dropdown) return;
-
-        var options = document.getElementById("options");
-        dropdown = document.createElement("details");
-        dropdown.classList.add("dropdown");
-        dropdown.id = "nav-dropdown";
-
-        var navContact = document.getElementById("nav-contact");
-        var summary = document.createElement("summary");
-        summary.innerHTML = `&#8801;`;
-
-        var dropdownUL = document.createElement("ul");
-        dropdownUL.id = "dropdown-ul";
-        dropdownUL.appendChild(navContact);
-
-        var dropdownLI = document.createElement("li");
-        dropdownUL.appendChild(dropdownLI);
-        dropdownLI.appendChild(dropdown);
-        dropdown.appendChild(summary);
-        dropdown.appendChild(options);
-
-        var topNavBar = document.getElementById("top-nav-bar");
-        topNavBar.appendChild(dropdownUL);
-      } else {
-        var dropdown = document.getElementById("nav-dropdown");
-        if (!dropdown) return;
-
-        var options = document.getElementById("options");
-        var navContact = document.getElementById("nav-contact");
-
-        options.appendChild(navContact);
-
-        var topNavBar = document.getElementById("top-nav-bar");
-
-        var dropdownUL = document.getElementById("dropdown-ul");
-        topNavBar.replaceChild(options, dropdownUL);
-      }
-    }
-
-    handleNavScaling();
-
-    onresize = (event) => {
-      handleNavScaling();
-    };
-  </script>
+  <div style="position: relative">
+    <div id="fullscreen-nav" class="fullscreen-nav">
+      <div id="options-fullscreen" class="grid">
+        <a hx-boost="true" href="contact.html"
+          ><button type="">Kontakt</button></a
+        >
+        <a hx-boost="true" href="about.html">
+          <button class="secondary">Über Mich</button></a
+        >
+        <details class="dropdown">
+          <summary>English</summary>
+          <ul>
+            <li><a href="/de/">🇩🇪 Deutsch</a></li>
+            <li><a href="/en/">🇬🇧 English</a></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="/assets/css/nav.css" />
+  <script src="/js/nav_scale.js"></script>
 </div>

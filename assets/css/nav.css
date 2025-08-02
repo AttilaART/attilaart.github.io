@@ -1,0 +1,49 @@
+.top-nav {
+  position: sticky;
+  background-color: var(--pico-background-color);
+  top: 0;
+  z-index: 2;
+}
+
+.fullscreen-nav {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: 0.5s;
+  background-color: var(--pico-background-color);
+}
+
+.fullscreen-nav.show {
+  transform: translateX(0);
+}
+
+#fullscreen-nav-button {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  #options {
+    display: none;
+  }
+
+  #fullscreen-nav-button {
+    display: unset;
+  }
+}
+
+#options-fullscreen {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: middle;
+  width: 80%;
+}
+
+#options-fullscreen > * > * {
+  width: 100%;
+}
