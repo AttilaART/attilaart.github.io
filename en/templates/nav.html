@@ -1,13 +1,13 @@
 <div class="top-nav">
-  <nav class="container">
+  <nav id="top-nav-bar" class="container">
     <ul>
       <li>
         <a hx-boost="true" href="index.html">
-          <h3 style="margin-bottom: 0;">AttilaART</h3>
+          <h3 style="margin-bottom: 0">AttilaART</h3>
         </a>
       </li>
     </ul>
-    <ul>
+    <ul id="options">
       <li>
         <details class="dropdown">
           <summary>English</summary>
@@ -18,7 +18,11 @@
         </details>
       </li>
       <li><a hx-boost="true" href="about.html">About</a></li>
-      <li><a hx-boost="true" href="contact.html"><button type="">Contact</button></a></li>
+      <li id="nav-contact">
+        <a hx-boost="true" href="contact.html"
+          ><button type="">Contact</button></a
+        >
+      </li>
     </ul>
   </nav>
   <style>
@@ -28,5 +32,71 @@
       top: 0;
       z-index: 2;
     }
+
+    #nav-dropdown:has(ul) ul {
+      right: 0;
+      left: unset;
+    }
+
+    #nav-dropdown:has(summary) summary::after {
+      content: unset;
+    }
+
+    #nav-dropdown:has(summary) summary {
+      font-size: 1rem;
+      text-align: center;
+      aspect-ratio: 1/1;
+    }
   </style>
+  <script>
+    const picoExtraSmall = 576; // px
+
+    function handleNavScaling() {
+      if (window.window.innerWidth < picoExtraSmall) {
+        var dropdown = document.getElementById("nav-dropdown");
+        if (dropdown) return;
+
+        var options = document.getElementById("options");
+        dropdown = document.createElement("details");
+        dropdown.classList.add("dropdown");
+        dropdown.id = "nav-dropdown";
+
+        var navContact = document.getElementById("nav-contact");
+        var summary = document.createElement("summary");
+        summary.innerHTML = `&#8801;`;
+
+        var dropdownUL = document.createElement("ul");
+        dropdownUL.id = "dropdown-ul";
+        dropdownUL.appendChild(navContact);
+
+        var dropdownLI = document.createElement("li");
+        dropdownUL.appendChild(dropdownLI);
+        dropdownLI.appendChild(dropdown);
+        dropdown.appendChild(summary);
+        dropdown.appendChild(options);
+
+        var topNavBar = document.getElementById("top-nav-bar");
+        topNavBar.appendChild(dropdownUL);
+      } else {
+        var dropdown = document.getElementById("nav-dropdown");
+        if (!dropdown) return;
+
+        var options = document.getElementById("options");
+        var navContact = document.getElementById("nav-contact");
+
+        options.appendChild(navContact);
+
+        var topNavBar = document.getElementById("top-nav-bar");
+
+        var dropdownUL = document.getElementById("dropdown-ul");
+        topNavBar.replaceChild(options, dropdownUL);
+      }
+    }
+
+    handleNavScaling();
+
+    onresize = (event) => {
+      handleNavScaling();
+    };
+  </script>
 </div>
