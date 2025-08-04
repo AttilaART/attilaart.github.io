@@ -11,6 +11,7 @@ html:not([data-scroll="0"]) .top-nav {
   box-shadow: 00 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .fullscreen-nav {
   width: 100vw;
   height: 100vh;
@@ -19,6 +20,7 @@ html:not([data-scroll="0"]) .top-nav {
   right: 100%;
   transition: 0.5s;
   background-color: var(--pico-background-color);
+  z-index: 100;
 }
 
 .fullscreen-nav.show {

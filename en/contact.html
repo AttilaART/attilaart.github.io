@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>AttilaART - Contact</title>
   <link rel="stylesheet" href="/assets/css/pico.css">
   <link rel="stylesheet" href="/assets/css/pico_extension.css">
   <link rel="stylesheet" href="/assets/css/animations.css">
@@ -22,14 +22,25 @@
   </header>
   <section class="container">
     <article>
-      <form>
+      <form action="https://formsubmit.co/826f1c91e9b14dcb77e2f8046fdd3d8f" method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display: none;">
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Custom success page -->
+        <!-- <input type="hidden" name="_next" value="https://attilaart.github.io/en/success.html"> -->
+
+        <!-- Real form -->
+
+        <input type="text" name="name" placeholder="Name*" required>
         <fieldset class="grid">
-          <input type="email" name="email" autocomplete="email" placeholder="Email*">
-          <input type="tel" name="phone" autocomplete="tel" placeholder="Phone Number*">
+          <input type="email" name="email" autocomplete="email" placeholder="Email*" required>
+          <input type="tel" name="phone" autocomplete="tel" placeholder="Phone Number">
         </fieldset>
         <small>We'll never share your personal information.</small>
-        <input type="text" name="Subject" value="" placeholder="Subject*">
-        <textarea type="text" name="Subject" value="" placeholder="Question*" style="min-height: 10rem;"></textarea>
+        <input type="text" name="subject" value="" placeholder="Subject*" required>
+        <textarea type="text" name="question" value="" placeholder="Question*" style="min-height: 10rem;"
+          required></textarea>
 
         <input type="submit" value="Send">
       </form>

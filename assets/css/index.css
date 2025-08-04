@@ -10,6 +10,16 @@ html:is([data-scroll="0"]) body:has(.fullscreen-nav.show) {
   background-color: var(--pico-background-color);
 }
 
+body:has(.fullscreen-nav.show) #nav-categories {
+  opacity: 0%;
+  visibility: hidden;
+  transition: 0.25s;
+}
+
+body:has(.fullscreen-nav.show) .top-nav {
+  background-color: var(--pico-background-color);
+}
+
 #top {
   background: white;
 }
