@@ -77,3 +77,8 @@ html {
   filter: invert();
   transform: scale(1.1);
 }
+
+img,
+picture {
+  border-radius: var(--pico-border-radius);
+}

@@ -1,14 +1,24 @@
+body {
+  transition: 0.25s;
+}
+
+html:is([data-scroll="0"]) body {
+  background-color: light-dark(white, black);
+}
+
+html:is([data-scroll="0"]) body:has(.fullscreen-nav.show) {
+  background-color: var(--pico-background-color);
+}
+
 #top {
   background: white;
 }
 
 @media (prefers-color-scheme: dark) {
   #top {
-    background: linear-gradient(
-      black 0%,
-      black 80%,
-      var(--pico-background-color)
-    );
+    background: linear-gradient(black 0%,
+        black 80%,
+        var(--pico-background-color));
   }
 }
 
@@ -27,6 +37,7 @@
 }
 
 @media (max-width: 400px) {
+
   #make,
   #your,
   #mark {
@@ -35,6 +46,7 @@
 }
 
 @media (max-width: 360px) {
+
   #make,
   #your,
   #mark {
@@ -46,28 +58,24 @@
 #your {
   -webkit-text-stroke: 1px light-dark(black, white);
   color: light-dark(white, black);
-  text-shadow: 0px 0px 10px
-    light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+  text-shadow: 0px 0px 10px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
   transition: 0.25s;
 }
 
 #make:hover,
 #your:hover {
-  text-shadow: 0px 0px 20px
-    light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+  text-shadow: 0px 0px 20px light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
 }
 
 #mark {
-  text-shadow: 0px 0px 20px
-    light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+  text-shadow: 0px 0px 20px light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
   transition: 0.25s;
   text-wrap: nowrap;
   color: light-dark(black, white);
 }
 
 #mark:hover {
-  text-shadow: 0px 0px 20px
-    light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+  text-shadow: 0px 0px 20px light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
 }
 
 #back-to-top-arrow {
@@ -94,12 +102,12 @@
   backdrop-filter: brightness(1.1);
 }
 
-#preferred {
-  outline: solid 1px var(--pico-primary);
-  box-shadow: 0px 0px 10px 0px var(--pico-primary);
+.plan {
   transition: 0.25s;
+  outline: solid 1px var(--pico-primary);
 }
 
-#preferred:hover {
-  box-shadow: 0px 0px 15px 0px var(--pico-primary);
+.plan:hover {
+  outline: solid 1px var(--pico-primary);
+  box-shadow: 0px 0px 5px 0px var(--pico-primary);
 }

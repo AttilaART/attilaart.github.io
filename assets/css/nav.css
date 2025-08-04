@@ -16,14 +16,13 @@ html:not([data-scroll="0"]) .top-nav {
   height: 100vh;
   position: absolute;
   top: 0;
-  left: 0;
-  transform: translateX(-100%);
+  right: 100%;
   transition: 0.5s;
   background-color: var(--pico-background-color);
 }
 
 .fullscreen-nav.show {
-  transform: translateX(0);
+  right: 0%;
 }
 
 #fullscreen-nav-button {
@@ -50,6 +49,6 @@ html:not([data-scroll="0"]) .top-nav {
   width: 80%;
 }
 
-#options-fullscreen > * > * {
+#options-fullscreen>*>* {
   width: 100%;
 }
