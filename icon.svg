@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="255mm"
+   height="255mm"
+   viewBox="0 0 255 255"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter57"
+       x="-0.14332474"
+       y="-0.15231008"
+       width="1.2866495"
+       height="1.3046202">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.396078"
+         flood-color="rgb(255,255,255)"
+         id="feFlood56" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="1.500000"
+         id="feGaussianBlur56" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000"
+         id="feOffset56" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset"
+         id="feComposite56" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite57" />
+    </filter>
+  </defs>
+  <g
+     id="g24"
+     transform="matrix(2.2630458,0,0,2.2630458,-0.35093104,74.010663)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.46201;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect1"
+       width="112.68"
+       height="112.68"
+       x="0.15506992"
+       y="-32.704006"
+       ry="28.652357" />
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:35.2777px;font-family:'Clash Grotesk';-inkscape-font-specification:'Clash Grotesk Semi-Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#000000;fill-opacity:0.100032;stroke-width:0.716756;stroke-linejoin:round;filter:url(#filter57)"
+       x="69.124481"
+       y="35.453991"
+       id="text1"
+       transform="matrix(2.9620381,0,0,2.9620381,-110.84549,-46.374721)"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.716756"
+         x="69.124481"
+         y="35.453991"
+         id="tspan25">A</tspan></text>
+  </g>
+</svg>

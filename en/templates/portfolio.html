@@ -1,79 +1,70 @@
-<section id="project-container">
-  <article class="grow-on-hover desaturated">
-    <a href="">
-      <article class="project-img shiny">
-        <img class="project-img" src="/assets/images/portfolio/ticket-checker-cover-tilt.webp" alt="">
+<section>
+  <link rel="stylesheet" href="/assets/css/portfolio.css" />
+  <link rel="stylesheet" href="/assets/css/carousel.css" />
+  <script>
+    import("/js/carousel.js").then((module) => {
+      module.Carousel("portfolio-carousel")
+    }) 
+  </script>
+  <div id="portfolio-carousel" class="carousel-container">
+    <div class="carousel">
+      <article class="grow-on-hover desaturated carousel-item">
+        <a href="">
+          <article class="project-img shiny">
+            <img class="project-img" src="/assets/images/portfolio/ticket-checker-cover-tilt.webp" alt="">
+          </article>
+        </a>
+        <h3>Ticket Checker
+          <article class="tag" style="background-color: var(--go-color);">Go</article>
+          <article class="tag" style="background-color: var(--htmx-color);">HTMX</article>
+          <article class="tag" style="background-color: var(--html-color);">HTML &amp; CSS</article>
+          <article class="tag-dark" style="background-color: var(--javascript-color);">Javascript</article>
+        </h3>
+        <p>Tool to validate tickets and document presence.</p>
       </article>
-    </a>
-    <h3>Ticket Checker
-      <article class="tag" style="background-color: var(--go-color);">Go</article>
-      <article class="tag" style="background-color: var(--htmx-color);">HTMX</article>
-      <article class="tag" style="background-color: var(--html-color);">HTML &amp; CSS</article>
-      <article class="tag-dark" style="background-color: var(--javascript-color);">Javascript</article>
-    </h3>
-    <p>Tool to validate tickets and document presence.</p>
-  </article>
 
-  <article class="grow-on-hover desaturated">
-    <a href="">
-      <article class="project-img shiny">
-        <img class="project-img" src="/assets/images/portfolio/ngemba-tilt.webp" alt="">
+      <article class="grow-on-hover desaturated carousel-item">
+        <a href="">
+          <article class="project-img shiny">
+            <img class="project-img" src="/assets/images/portfolio/ngemba-tilt.webp" alt="">
+          </article>
+        </a>
+        <h3>Ngemba.biz Homepage
+          <article class="tag" style="background-color: var(--html-color);">HTML &amp; CSS</article>
+          <article class="tag" style="background-color: var(--odoo-color);">Odoo</article>
+        </h3>
+        <p>Homepage for ERP & CRM vendor.</p>
       </article>
-    </a>
-    <h3>Ngemba.biz Homepage
-      <article class="tag" style="background-color: var(--html-color);">HTML &amp; CSS</article>
-      <article class="tag" style="background-color: var(--odoo-color);">Odoo</article>
-    </h3>
-    <p>Homepage for ERP & CRM vendor.</p>
-  </article>
 
-  <article class="grow-on-hover desaturated">
-    <a href="">
-      <article class="project-img shiny">
-        <img class="project-img" src="/assets/images/portfolio/wisim-tilt.webp" alt="">
+      <article class="grow-on-hover desaturated carousel-item">
+        <a href="">
+          <article class="project-img shiny">
+            <img class="project-img" src="/assets/images/portfolio/wisim-tilt.webp" alt="">
+          </article>
+        </a>
+        <h3>Wisim
+          <article class="tag" style="background-color: var(--go-color);">Go</article>
+          <article class="tag" style="background-color: var(--godot-color);">Godot</article>
+        </h3>
+        <p>Online, competitive company managment game</p>
       </article>
-    </a>
-    <h3>Wisim
-      <article class="tag" style="background-color: var(--go-color);">Go</article>
-      <article class="tag" style="background-color: var(--godot-color);">Godot</article>
-    </h3>
-    <p>Online, competitive company managment game</p>
-  </article>
 
-  <article class="grow-on-hover desaturated">
-    <article class="project-img shiny">
-      <img class="project-img" src="/assets/images/portfolio/question-mark.svg" alt="">
-    </article>
-    <h3>Your project
-    </h3>
-    <p>Your company could be next!</p>
-    <center>
-      <a href="/contact.html">
-        <button type="">
-          Get in toutch
-        </button>
-      </a>
-    </center>
-  </article>
+      <article class="grow-on-hover desaturated carousel-item">
+        <article class="project-img shiny">
+          <img class="project-img" src="/assets/images/portfolio/question-mark.svg" alt="">
+        </article>
+        <h3>Your project
+        </h3>
+        <p>Your company could be next!</p>
+        <center>
+          <a href="/contact.html">
+            <button type="">
+              Get in toutch
+            </button>
+          </a>
+        </center>
+      </article>
+    </div>
+    <div class="carousel-control"></div>
+  </div>
 </section>
-
-<style>
-  #project-container {
-    display: flex;
-    gap: var(--pico-spacing);
-    overflow-x: scroll;
-  }
-
-  img.project-img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  article.project-img {
-    overflow: hidden;
-    padding: 0;
-    aspect-ratio: 1 / 1.25;
-    height: 40vh;
-  }
-</style>
