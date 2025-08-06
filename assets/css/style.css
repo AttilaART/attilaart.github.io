@@ -83,3 +83,35 @@ img,
 picture {
   border-radius: var(--pico-border-radius);
 }
+
+@keyframes fade-in-from-bottom {
+  from {
+    opacity: 0%;
+    transform: translateY(var(--pico-spacing));
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  opacity: 0%;
+}
+
+.animate.show {
+  opacity: 0%;
+  animation: fade-in-from-bottom 0.25s ease-in-out 0.25s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate {
+    opacity: 100% !important;
+  }
+
+  .animate.show {
+    opacity: 100% !important;
+    animation: unset !important;
+  }
+}
