@@ -29,8 +29,7 @@ nav:has(ul) ul {
 }
 
 section {
-  padding-top: calc(2 * var(--pico-spacing));
-  padding-bottom: calc(2 * var(--pico-spacing));
+  margin-bottom: calc(2 * var(--pico-spacing));
 }
 
 .circle-num,
