@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AttilaART - Contact</title>
+  <link rel="icon" href="/icon.svg" />
+  <link rel="stylesheet" href="/assets/css/pico.css">
+  <link rel="stylesheet" href="/assets/css/pico_extension.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/clash-grotesk.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/js/htmx.js"></script>
+  <script src="/js/interface.js" type="module"></script>
+</head>
+
+<nav id="nav"></nav>
+
+<body>
+  <header class="container">
+    <h1>Contactez moi</h1>
+  </header>
+  <section class="container">
+    <article>
+      <form action="https://formsubmit.co/b8ff5dd58b5c428c39af33229a60c0bd" method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display: none;">
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Custom success page -->
+        <!-- <input type="hidden" name="_next" value="https://attilaart.github.io/en/success.html"> -->
+
+        <!-- Real form -->
+
+        <input type="text" name="name" placeholder="Nom*" required>
+        <fieldset class="grid">
+          <input type="email" name="email" autocomplete="email" placeholder="Email*" required>
+          <input type="tel" name="phone" autocomplete="tel" placeholder="Numéro de téléphone">
+        </fieldset>
+        <small>Nous partageons jamais vos informations personnelles.</small>
+        <input type="text" name="subject" value="" placeholder="Sujet*" required>
+        <textarea type="text" name="question" value="" placeholder="Question*" style="min-height: 10rem;"
+          required></textarea>
+
+        <input type="submit" value="Envoyer">
+      </form>
+    </article>
+  </section>
+</body>
+<footer id="footer"></footer>
+
+</html>
+
+<style>
+</style>

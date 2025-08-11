@@ -10,3 +10,7 @@
     aspect-ratio: 1 / 1.25;
     height: 40vh;
   }
+
+  .carousel {
+    padding-top: calc(var(--pico-spacing) / 4);
+  }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AttilaART - Über Mich</title>
+  <title>AttilaART - About</title>
   <link rel="icon" href="/icon.svg" />
   <link rel="stylesheet" href="/assets/css/pico.css">
   <link rel="stylesheet" href="/assets/css/pico_extension.css">
@@ -30,8 +30,7 @@
           <!--<div style="flex-grow: 1;"></div>-->
           <div style="">
             <h2>Attila Pinter</h2>
-            <p>Junger Programmierer von Winterthur. Kann fliessend <strong>Englisch, Deutsch und Französisch</strong>.
-            </p>
+            <p>Jeun développeur basé à Winterthur parlent <strong>français, anglais et allemand</strong>.</p>
             <small class="grid">
               <p>Email: <a href="mailto:attila@attilaart.ch">attila@attilaart.ch</a><br>
               <p>Github: <a href="https://github.com/AttilaART">AttilaART</a></p>
@@ -43,19 +42,19 @@
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Javascript
               </h1>
-              <small>Programmiersprache</small>
+              <small>Langage de programmation</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/html.webp" alt="Html logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">HTML/CSS</h1>
-              <small>Markupsprachen</small>
+              <small>Langage de balisage</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/svelte.webp" alt="Svelte logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Svelte</h1>
-              <small>Javascript-Framework</small>
+              <small>Framework Javascript</small>
             </div>
           </article>
           <article class="language-card shiny">
@@ -65,37 +64,38 @@
             </picture>
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">HTMX</h1>
-              <small>Javascript-Bibliothek</small>
+              <small>Bibliothèque Javascript</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/go.webp" alt="go logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Go</h1>
-              <small>Programmiersprache</small>
+              <small>Language de programmation</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/python.webp" alt="python logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Python</h1>
-              <small>Programmiersprache</small>
+              <small>Language de programmation</small>
             </div>
           </article>
-          <article class="language-card shiny"><img src="/assets/graphics/logos/odoo.webp" alt="godot logo">
+          <article class="language-card shiny">
+            <img src="/assets/graphics/logos/odoo.webp" alt="odoo logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Odoo</h1>
-              <small>CRM &amp; ERP</small>
+              <small>CRM et ERP</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/godot.webp" alt="godot logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Godot</h1>
-              <small>Game Engine</small>
+              <small>Game engine</small>
             </div>
           </article>
           <article class="language-card shiny"><img src="/assets/graphics/logos/linux.webp" alt="Archlinux logo">
             <div>
               <h1 style="text-align: center; margin-bottom: 0;">Linux</h1>
-              <small>Betriebssystem</small>
+              <small>Système d'exploitation</small>
             </div>
           </article>
         </div>
@@ -106,24 +106,24 @@
   </div>
 
   <section id="about-me" class="container">
-    <h2>Über Mich</h2>
+    <h2>A propos de moi</h2>
     <h6>
-      Ich bin ein Schüler im 4. Jahr des Gymnasiums in Winterthur, der Coding, Kochen und Volleyball liebt.
+      Je suis un étudiant en dernière année du lycée que aime la programmation, la quisine et le volley.
     </h6>
     <p>
-      Nach 3 Jahren immer Programmierung (mit Unterbrechungen) fokussiere ich mich seit den letzten 6 Monaten auf
-      Fall-Stack-Entwicklung.
+      Après avoir écrit un certain nombre de scripts durant les 3 dernières années, je me suis concentré sur le
+      développement full-stack durant cette dernière année.
     </p>
     <p>
-      Ich bin auch Teil der Schülerorganisation, wo ich nicht nur Events organisiere, sondern auch Software entwickle,
-      sodass die Events effizient und reibungslos ablaufen.
+      Je suis aussi membre de l'association d'élèves de mon lycée où non seulement j'organise des evénements mais je
+      développe des applications de soutien.
     </p>
   </section>
 
   <a href="#top"><button id="back-to-top-arrow" data-tooltip="Scroll to top"><img src="/assets/graphics/down-arrow.svg"
         alt="↑"></button></a>
   <section id="projects" class="container-fluid">
-    <h1 style="text-align: center;">Verganene Projekte</h1>
+    <h1 style="text-align: center;">Projets précédents</h1>
     <section id="portfolio">
 
     </section>
@@ -161,11 +161,14 @@
     animation: shine ease-in-out;
   }
 
+  article.language-card:has(picture) picture,
   article.language-card:has(img) img {
     object-fit: contain;
-    width: 100%;
-    height: 100%;
-    object-position: center;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-position: 50% 50%;
   }
 
   article.language-card:has(div) div {
@@ -183,6 +186,7 @@
   }
 
   article.language-card:has(div) div:has(h1) h1 {
+    font-size: 1.25rem;
     color: #f0f1f3;
   }
 
@@ -274,44 +278,6 @@
       opacity: 0%;
       transform: translate(-10px, -5px) rotate(-5deg);
     }
-  }
-
-  #see-more-arrow,
-  #back-to-top-arrow {
-    width: 5em;
-    background: var(--pico-card-background-color);
-    border-radius: 100px;
-    border-width: 0;
-    transition: 0.5s;
-  }
-
-  #see-more-arrow {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    width: 5em;
-    background: var(--pico-card-background-color);
-    border-radius: 100px;
-    border-width: 0;
-    transition: 0.5s;
-  }
-
-  #back-to-top-arrow {
-    position: sticky;
-    top: 80vh;
-    left: calc(100% - 6em);
-    z-index: 1;
-  }
-
-  #see-more-arrow:hover {
-    filter: invert();
-    transform: translate(-50%, 50%) scale(1.1);
-  }
-
-  #back-to-top-arrow:hover {
-    filter: invert();
-    transform: scale(1.1);
   }
 
   #projects {
