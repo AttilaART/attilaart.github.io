@@ -15,6 +15,7 @@
     scroll-margin-top: 10rem;
   }
 
+
   .carousel-control {
     display: flex;
     position: absolute;
@@ -35,6 +36,7 @@
 
 
 
+
   @media (hover: none) {
     .carousel-control>a {
       width: 20px;
@@ -46,4 +48,9 @@
   .carousel-control>a:hover {
     background-color: rgba(255, 255, 255, 1);
     transform: scale(1.1);
+  }
+
+  /* Disable .carousel-control */
+  .carousel-control {
+    display: none;
   }
