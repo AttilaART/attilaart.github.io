@@ -73,3 +73,9 @@ section {
     transform: scale(1.05);
   }
 }
+
+[data-tooltip]::before,
+[data-tooltip]::after {
+  font-family: var(--pico-font-family-sans-serif);
+  font-weight: normal;
+}
