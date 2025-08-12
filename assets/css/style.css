@@ -115,3 +115,15 @@ picture {
     animation: unset !important;
   }
 }
+
+.no-bullet>li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  padding: calc(var(--pico-spacing) * 2) !important;
+  backdrop-filter: brightness(50%);
+  margin-bottom: 0;
+}
