@@ -67,6 +67,9 @@ html {
   top: 80vh;
   left: calc(100% - 6em);
   z-index: 1;
+  background: transparent;
+  backdrop-filter: blur(100px) brightness(40%);
+  border: 1px solid var(--pico-card-background-color);
 }
 
 #see-more-arrow:hover {

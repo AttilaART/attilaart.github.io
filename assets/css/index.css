@@ -106,26 +106,6 @@ body:has(.fullscreen-nav.show) .top-nav {
   animation: fade-in-from-bottom 0.25s ease-in-out 2.25s forwards;
 }
 
-#back-to-top-arrow {
-  width: 5em;
-  background: var(--pico-card-background-color);
-  border-radius: 100px;
-  border-width: 0;
-  transition: 0.5s;
-}
-
-#back-to-top-arrow {
-  position: sticky;
-  top: 80vh;
-  left: calc(100% - 6em);
-  z-index: 1;
-}
-
-#back-to-top-arrow:hover {
-  filter: invert();
-  transform: scale(1.1);
-}
-
 #projects {
   backdrop-filter: brightness(1.1);
   padding: var(--pico-spacing);
