@@ -122,8 +122,8 @@ picture {
   margin: 0;
 }
 
-footer {
+footer.footer {
   padding: calc(var(--pico-spacing) * 2) !important;
-  backdrop-filter: brightness(50%);
+  backdrop-filter: brightness(90%);
   margin-bottom: 0;
 }

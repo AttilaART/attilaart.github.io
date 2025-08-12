@@ -136,6 +136,22 @@ body:has(.fullscreen-nav.show) .top-nav {
   outline: solid 1px var(--pico-primary);
   width: fit-content;
   padding: var(--pico-spacing);
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.plan>a>button,
+.plan>a {
+  width: 100%;
+}
+
+.plan>div>h6 {
+  margin-bottom: calc(var(--pico-spacing) / 4);
 }
 
 .plan:hover {
@@ -144,8 +160,14 @@ body:has(.fullscreen-nav.show) .top-nav {
 }
 
 #plans {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--pico-spacing);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, auto);
   justify-content: center;
+  gap: var(--pico-spacing);
+
+  @media (max-width: 767px) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+  }
 }
