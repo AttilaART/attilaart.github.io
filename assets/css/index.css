@@ -134,9 +134,18 @@ body:has(.fullscreen-nav.show) .top-nav {
 .plan {
   transition: 0.25s;
   outline: solid 1px var(--pico-primary);
+  width: fit-content;
+  padding: var(--pico-spacing);
 }
 
 .plan:hover {
   outline: solid 1px var(--pico-primary);
   box-shadow: 0px 0px 5px 0px var(--pico-primary);
+}
+
+#plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pico-spacing);
+  justify-content: center;
 }
