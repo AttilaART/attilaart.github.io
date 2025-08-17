@@ -24,7 +24,8 @@ if ! docker run --name attilaart -d -p 8000:8000 attilaart; then
   exit 126
 fi
 
+echo "Allowing port 8000"
 ufw allow 8000
-ufw enable
+echo "y" | sudo ufw enable
 
 echo "Successfully initialised Attilaart"
