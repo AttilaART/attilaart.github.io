@@ -3,10 +3,12 @@
 echo "Building Project: Attilaart"
 cd "$(dirname "$0")"
 
-containerid=docker ps -a -q -f name="attilaart"
+containerid=$(docker ps -a -q -f name="attilaart")
 
 if ! $containerid; then
-  if ! docker rmi attilaart; then
+  echo "Deleting previous container: $containerid"
+
+  if ! docker rm $containerid --force; then
     echo "ERROR: failed to remove previous instance"
     exit 126
   fi
