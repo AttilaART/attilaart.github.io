@@ -115,7 +115,7 @@ body:has(.fullscreen-nav.show) .top-nav {
   transition: 0.25s;
   outline: solid 1px var(--pico-primary);
   width: fit-content;
-  padding: var(--pico-spacing);
+  padding: calc(var(--pico-spacing) * 2);
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;

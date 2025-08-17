@@ -139,3 +139,7 @@ footer.footer {
   backdrop-filter: brightness(90%);
   margin-bottom: 0;
 }
+
+#about-me {
+  max-width: 1000px !important;
+}
