@@ -3,7 +3,7 @@
 echo "Building Project: Attilaart"
 cd "$(dirname "$0")"
 
-containerid=docker ps -q -f name="attilaart"
+containerid=docker ps -a -q -f name="attilaart"
 
 if ! $containerid; then
   if ! docker rmi attilaart; then
